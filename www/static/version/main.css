@@ -243,6 +243,10 @@ div.social > a {
   background-repeat: no-repeat;
 }
 
+img.banner {
+  width: 75%;
+}
+
 @media (min-width: 1000px) {
   html {
     font-size: 20pt;
