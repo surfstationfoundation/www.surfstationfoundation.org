@@ -1,0 +1,305 @@
+/* think mobile first and then respond to larger sizes. */
+/* for example, body will be 100% wide up to some width */
+/* then it stays fixed width and centers itself. */
+
+html {
+  background-color: #f3f2ef;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10pt;
+}
+
+body {
+  max-width: 1264px;
+  margin: 0px auto;
+  border: 1px solid #3560ab;
+  padding: 0px;
+  line-height: 125%;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-size: 1.75em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+header, main, footer {
+  position: relative;
+  display: block;
+}
+
+header {
+  border-bottom: 1px solid #3560ab;
+}
+
+footer {
+  border-top: 1px solid #3560ab;
+}
+
+section {
+  margin: 0.2in;
+}
+
+nav {
+  position: relative;
+}
+
+nav input[type=checkbox] {
+  display: none;
+}
+
+nav > label {
+  position: absolute;
+  top: -52px;
+  right: 10px;
+  width: 0.23in;
+  height: 0.23in;
+  padding: 0.07in;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+nav > label > img {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+nav > input[type=checkbox]:checked + label > img:first-child {
+  display: block;
+}
+
+nav > input[type=checkbox]:not(:checked) + label > img:last-child {
+  display: block;
+}
+
+nav menu {
+  display: none;
+  position: relative;
+  background-color: #3560ab;
+  margin: 0px;
+  padding: 0px;
+}
+
+input[type=checkbox]:checked ~ menu {
+  display: block;
+}
+
+nav menu li {
+  display: block;
+  border-top: 1px solid #ffffff;
+}
+
+nav > menu > li:first-child {
+  border-top: 0px solid #ffffff;
+}
+
+nav menu li a {
+  display: block;
+  margin: 0px;
+  padding: 20px;
+  color: #ffffff;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+nav menu menu li {
+  border-top: 1px solid #3560ab;
+}
+
+nav menu menu li a {
+  color: #3560ab;
+  background-color: #ffffff;
+}
+
+.quarters > div {
+  width: 23%;
+  float: left;
+  margin: 0px 1% 0px 1%;
+}
+
+.thirds > div {
+  width: calc(94% / 3);
+  float: left;
+  margin: 0px calc(1% - 2px) 0.2in calc(1% - 2px);
+  border: 2px solid #000000;
+}
+
+.thirds.noborder > div {
+  margin: 0px 1% 0.2in 1%;
+  border: none;
+}
+
+.quarters::after, .thirds::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+div.text_image_wrapper img {
+  display: inline;
+  width: auto;
+  height: 2em;
+  vertical-align: middle;
+}
+
+.margin_large {
+  margin: 1in;
+}
+
+.round_bordered {
+  border: 1px solid #3560ab;
+  border-radius: 5px;
+}
+
+div.responsive_iframe_container {
+  position: relative;
+  padding: 0px 0px calc(100% * 9 / 16) 0px; /* see https://css-tricks.com/scale-svg/ "Option 4: Use the padding-bottom Hack on a Container" */
+  height: 0px;
+  overflow: hidden;
+}
+
+div.responsive_iframe_container > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+div.social {
+  font-size: 0px;
+  line-height: 0px;
+}
+
+div.copyright {
+  font-size: 0.5em;
+}
+
+div.social img {
+  height: 48px;
+  width: 48px;
+  margin: 20px;
+}
+
+div.social > a {
+  display: inline-block;
+}
+
+.left_bordered {
+  text-align: left;
+  border-bottom: 1px solid #3560ab;
+}
+
+.special {
+  font-family: 'Encode Sans', sans-serif;
+  margin: 0.2in;
+}
+
+.bottom_margined {
+  margin-bottom: 10px;
+}
+
+.equal_height {
+  position: relative;
+  height: 0px;
+  padding: 0px 0px 100% 0px;
+  overflow: hidden;
+}
+
+.equal_height img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: auto;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.bgimg {
+  padding: 0.25in;
+  background-image: url("images/ocean_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 20pt;
+  }
+
+  nav > label {
+    display: none;
+  }
+
+  nav > menu {
+    display: block;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  nav > menu > li {
+    display: inline-block;
+    margin-right: 25px;
+    border-top: none;
+  }
+
+  nav menu li a {
+    font-size: 0.9em;
+    padding: 3px;
+  }
+
+  nav menu li:hover a {
+    color: #3560ab;
+    background-color: #ffffff;
+  }
+
+  menu li menu {
+    position: absolute;
+    border: 1px solid #3560ab;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  menu input[type=checkbox]:checked ~ menu {
+    display: none;
+  }
+
+  :root nav menu li:hover > menu {
+    /* use :root to increase the css specificity of this style */
+    /* so that it overrides the override of checked checkboxes */
+    display: block;
+  }
+
+  menu li menu li a {
+    padding: 10px;
+  }
+
+  menu li menu li:hover a {
+    background-color: #3560ab;
+    color: #ffffff;
+  }
+
+  img.natural {
+    width: auto;
+  }
+}
