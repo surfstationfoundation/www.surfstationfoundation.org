@@ -251,6 +251,11 @@ img.partner {
   width: 50%;
 }
 
+img.boardprofilepic {
+  width: 50%;
+  border-radius: 20px;
+}
+
 @media (min-width: 1000px) {
   html {
     font-size: 20pt;
