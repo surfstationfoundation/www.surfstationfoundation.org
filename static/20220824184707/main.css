@@ -137,7 +137,7 @@ nav menu menu li a {
   width: calc(94% / 3);
   float: left;
   margin: 0px calc(1% - 2px) 0.2in calc(1% - 2px);
-  border: 2px solid #000000;
+  border: 0px solid #000000;
 }
 
 .thirds.noborder > div {
