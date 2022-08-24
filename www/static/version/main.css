@@ -247,6 +247,10 @@ img.banner {
   width: 75%;
 }
 
+img.partner {
+  width: 50%;
+}
+
 @media (min-width: 1000px) {
   html {
     font-size: 20pt;
