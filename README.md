@@ -1,6 +1,19 @@
 # www.surfstationfoundation.org
 
-## initial setup
+## new contributor setup
+
+- install jekyll https://jekyllrb.com/docs/installation/
+- `git clone https://github.com/surfstationfoundation/www.surfstationfoundation.org.git`
+- `cd www.surfstationfoundation.org/`
+- `git config user.name surfstationfoundation`
+- `git config user.email 'surfstationfoundation@users.noreply.github.com'`
+- `bundle install`
+- `cd www/`
+- `JEKYLL_ENV=development bundle exec jekyll serve --host 0.0.0.0;`
+- make your changes and push to the repo hosted on github
+- check the build status to see when your changes are deployed `https://github.com/surfstationfoundation/www.surfstationfoundation.org/actions`
+
+## initial setup (historical info)
 
 - create a new public repository named `www.surfstationfoundation.org`
 - go to https://github.com/surfstationfoundation/www.surfstationfoundation.org/settings and configure the new repo
