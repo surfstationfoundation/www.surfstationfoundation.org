@@ -9,8 +9,9 @@
 - `git config user.email 'surfstationfoundation@users.noreply.github.com'`
 - `bundle install`
 - `cd www/`
-- `JEKYLL_ENV=development bundle exec jekyll serve --host 0.0.0.0;`
-- make your changes and push to the repo hosted on github
+- make your code changes
+- test your code changes. for example, `JEKYLL_ENV=development bundle exec jekyll serve --host 0.0.0.0;` then navigate your web browser to `http://0.0.0.0:4000/`
+- push to the repo hosted on github. for example, `git push origin main`
 - check the build status to see when your changes are deployed `https://github.com/surfstationfoundation/www.surfstationfoundation.org/actions`
 
 ## initial setup (historical info)
